@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <h1 class="display-4">Ideias de projetos</h1>
+                <p class="lead">Desenvolvido para mostrar aleatoriamente uma ideia de projeto com Tema e Linguagens de Front-end e Back-end.</p>
+                <hr class="my-4">
+                <p>A ideia geral a princípio é servir de um primeiro passo e gerar um desafio caso queira desenvolver algo mas esteja sem ideias. E/Ou queira aprender uma linguagem de programação ou alguma capacitação específica.</p>
+                <p>Pode ser usado também para sortear termos específicos.</p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="https://github.com/bazsant/ideia-projeto" target="_blank" role="button">Github</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-sorter [assunto]="'Temas'" [dados]="temas"></app-sorter>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-sorter [assunto]="'Front-End'" [dados]="fronts"></app-sorter>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-sorter [assunto]="'Back-End'" [dados]="back"></app-sorter>
+        </div>
+    </div>
+</div>

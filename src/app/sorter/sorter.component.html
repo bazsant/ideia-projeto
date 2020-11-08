@@ -1,0 +1,19 @@
+<div class="card mb-3">
+    <div class="card-header">
+        <h3>{{assunto}}</h3>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Termos disponíveis</h5>
+        <div class="badge badge-success mr-2 mb-2" *ngFor="let dado of dados">
+            <h6 class="m-2">{{dado}} <img src="assets\svg\x.svg" (click)="excluir(dado)" class="svg-excluir ml-2" alt="Excluir termo"></h6>
+        </div>
+        <div class="input-group mb-3 mt-3">
+            <input type="text" class="form-control" #termo placeholder="Adicionar termo" aria-label="Adicionar termo" aria-describedby="adicionar-termo">
+            <div class="input-group-append">
+                <input class="btn btn-outline-secondary" (click)="adicionar(termo.value)" type="button" value="Adicionar">
+            </div>
+        </div>
+        <input type="button" (click)="sortear()" class="btn btn-primary mb-2" value="Sortear">
+        <h5 class="card-title">Valor escolhido: {{valor}}</h5>
+    </div>
+</div>
